@@ -1,0 +1,432 @@
+[
+ {
+  "sku": "SAR-001",
+  "seller": "S100",
+  "title": "BEST QUALITY saree combo 2pcs cotton matrial free shipping!!",
+  "desc": "100% color guarantee, best in market",
+  "expect_category": "sarees",
+  "expect_attrs": {
+   "fabric": "cotton",
+   "pack_size": 2
+  },
+  "expect_decision": "REVIEW",
+  "dup_group": "saree_cotton_2pk",
+  "note": "unsupported guarantee + superlative"
+ },
+ {
+  "sku": "SAR-002",
+  "seller": "S101",
+  "title": "Pack of 2 Cotton Sarees for Women Daily Wear",
+  "desc": "Two soft cotton sarees, red and blue.",
+  "expect_category": "sarees",
+  "expect_attrs": {
+   "fabric": "cotton",
+   "pack_size": 2
+  },
+  "expect_decision": "REVIEW",
+  "dup_group": "saree_cotton_2pk",
+  "note": "near-duplicate of SAR-001, different seller"
+ },
+ {
+  "sku": "SAR-003",
+  "seller": "S100",
+  "title": "Silk Saree Wedding Wear Maroon Single Piece",
+  "desc": "Pure silk saree in maroon for weddings.",
+  "expect_category": "sarees",
+  "expect_attrs": {
+   "fabric": "silk",
+   "color": "maroon",
+   "pack_size": 1
+  },
+  "expect_decision": "PUBLISH",
+  "dup_group": null,
+  "note": ""
+ },
+ {
+  "sku": "SAR-004",
+  "seller": "S102",
+  "title": "Georgette Printed Saree Party Wear Green",
+  "desc": "Lightweight georgette saree with floral print.",
+  "expect_category": "sarees",
+  "expect_attrs": {
+   "fabric": "georgette",
+   "color": "green",
+   "pack_size": 1
+  },
+  "expect_decision": "PUBLISH",
+  "dup_group": null,
+  "note": ""
+ },
+ {
+  "sku": "SAR-005",
+  "seller": "S103",
+  "title": "saree combo offer 3 pcs chiffon best price",
+  "desc": "Three chiffon sarees, assorted colours.",
+  "expect_category": "sarees",
+  "expect_attrs": {
+   "fabric": "chiffon",
+   "pack_size": 3
+  },
+  "expect_decision": "REVIEW",
+  "dup_group": null,
+  "note": "missing colour"
+ },
+ {
+  "sku": "KUR-001",
+  "seller": "S110",
+  "title": "Red Kurti Large Size Party Wear Rayon",
+  "desc": "Rayon kurti in red, size L, three quarter sleeve.",
+  "expect_category": "kurtis",
+  "expect_attrs": {
+   "fabric": "rayon",
+   "color": "red",
+   "size": "L"
+  },
+  "expect_decision": "PUBLISH",
+  "dup_group": "kurti_red_rayon_L",
+  "note": ""
+ },
+ {
+  "sku": "KUR-002",
+  "seller": "S111",
+  "title": "Women Cotton Kurti Blue Medium Casual",
+  "desc": "Cotton kurti, blue, medium size, for daily wear.",
+  "expect_category": "kurtis",
+  "expect_attrs": {
+   "fabric": "cotton",
+   "color": "blue",
+   "size": "M"
+  },
+  "expect_decision": "PUBLISH",
+  "dup_group": "kurti_blue_cotton_M",
+  "note": "same product as the other blue cotton M kurti (label corrected after threshold sweep)"
+ },
+ {
+  "sku": "KUR-003",
+  "seller": "S110",
+  "title": "kurti rayon red large party 100% original guaranteed",
+  "desc": "Best quality rayon kurti red large.",
+  "expect_category": "kurtis",
+  "expect_attrs": {
+   "fabric": "rayon",
+   "color": "red",
+   "size": "L"
+  },
+  "expect_decision": "REJECT",
+  "dup_group": "kurti_red_rayon_L",
+  "note": "self-duplicate of KUR-001 plus guarantee claim"
+ },
+ {
+  "sku": "KUR-004",
+  "seller": "S112",
+  "title": "Embroidered Kurti Festive Wear XXL Green Cotton",
+  "desc": "Cotton kurti with embroidery, size XXL, green.",
+  "expect_category": "kurtis",
+  "expect_attrs": {
+   "fabric": "cotton",
+   "color": "green",
+   "size": "XXL"
+  },
+  "expect_decision": "PUBLISH",
+  "dup_group": null,
+  "note": ""
+ },
+ {
+  "sku": "TSH-001",
+  "seller": "S120",
+  "title": "Men Cotton Round Neck T-Shirt Black M",
+  "desc": "Black cotton t-shirt for men, medium, half sleeve.",
+  "expect_category": "tshirts",
+  "expect_attrs": {
+   "fabric": "cotton",
+   "color": "black",
+   "size": "M"
+  },
+  "expect_decision": "PUBLISH",
+  "dup_group": null,
+  "note": ""
+ },
+ {
+  "sku": "TSH-002",
+  "seller": "S121",
+  "title": "tshirt polyester white XL unisex printed",
+  "desc": "Printed white polyester t-shirt, XL.",
+  "expect_category": "tshirts",
+  "expect_attrs": {
+   "fabric": "polyester",
+   "color": "white",
+   "size": "XL"
+  },
+  "expect_decision": "PUBLISH",
+  "dup_group": null,
+  "note": ""
+ },
+ {
+  "sku": "TSH-003",
+  "seller": "S122",
+  "title": "NIKE first copy tshirt 7A quality black L",
+  "desc": "Master copy, looks exactly like original.",
+  "expect_category": "tshirts",
+  "expect_attrs": {},
+  "expect_decision": "REJECT",
+  "dup_group": null,
+  "note": "counterfeit"
+ },
+ {
+  "sku": "JEA-001",
+  "seller": "S130",
+  "title": "Men Slim Fit Blue Jeans Size 32 Denim",
+  "desc": "Blue denim jeans, slim fit, button closure.",
+  "expect_category": "jeans",
+  "expect_attrs": {
+   "color": "blue"
+  },
+  "expect_decision": "REVIEW",
+  "dup_group": null,
+  "note": "waist size 32 not in enum"
+ },
+ {
+  "sku": "JEA-002",
+  "seller": "S131",
+  "title": "Women Black Jeans L Stretchable",
+  "desc": "Stretchable black jeans for women, size L.",
+  "expect_category": "jeans",
+  "expect_attrs": {
+   "color": "black",
+   "size": "L"
+  },
+  "expect_decision": "PUBLISH",
+  "dup_group": null,
+  "note": ""
+ },
+ {
+  "sku": "BED-001",
+  "seller": "S140",
+  "title": "Double Bedsheet Cotton with 2 Pillow Covers Floral",
+  "desc": "Cotton double bedsheet, floral print, pack of 3 including pillow covers.",
+  "expect_category": "bedsheets",
+  "expect_attrs": {
+   "fabric": "cotton",
+   "pack_size": 3
+  },
+  "expect_decision": "REVIEW",
+  "dup_group": null,
+  "note": "colour unstated"
+ },
+ {
+  "sku": "BED-002",
+  "seller": "S141",
+  "title": "Bedsheet Set Blue Cotton King Size Pack of 1",
+  "desc": "Blue cotton king size bedsheet, single piece.",
+  "expect_category": "bedsheets",
+  "expect_attrs": {
+   "fabric": "cotton",
+   "color": "blue",
+   "pack_size": 1
+  },
+  "expect_decision": "PUBLISH",
+  "dup_group": null,
+  "note": ""
+ },
+ {
+  "sku": "KIT-001",
+  "seller": "S150",
+  "title": "Airtight Plastic Container Set 6 pcs Kitchen Storage",
+  "desc": "Set of six airtight plastic containers with lids.",
+  "expect_category": "kitchen_storage",
+  "expect_attrs": {
+   "material": "plastic",
+   "pack_size": 6
+  },
+  "expect_decision": "PUBLISH",
+  "dup_group": "kit_plastic_6",
+  "note": ""
+ },
+ {
+  "sku": "KIT-002",
+  "seller": "S151",
+  "title": "Steel Water Bottle 1000ml Silver Pack of 2",
+  "desc": "Two stainless steel water bottles, one litre each.",
+  "expect_category": "kitchen_storage",
+  "expect_attrs": {
+   "material": "steel",
+   "pack_size": 2,
+   "capacity_ml": 1000
+  },
+  "expect_decision": "PUBLISH",
+  "dup_group": null,
+  "note": ""
+ },
+ {
+  "sku": "KIT-003",
+  "seller": "S150",
+  "title": "6 piece airtight plastic kitchen container set unbreakable",
+  "desc": "Six airtight plastic containers, unbreakable quality.",
+  "expect_category": "kitchen_storage",
+  "expect_attrs": {
+   "material": "plastic",
+   "pack_size": 6
+  },
+  "expect_decision": "REJECT",
+  "dup_group": "kit_plastic_6",
+  "note": "self-duplicate of KIT-001 plus unbreakable claim"
+ },
+ {
+  "sku": "DEC-001",
+  "seller": "S160",
+  "title": "Wooden Wall Shelf Brown Set of 3 Home Decor",
+  "desc": "Three brown wooden wall shelves.",
+  "expect_category": "home_decor",
+  "expect_attrs": {
+   "material": "wood",
+   "color": "brown",
+   "pack_size": 3
+  },
+  "expect_decision": "PUBLISH",
+  "dup_group": null,
+  "note": ""
+ },
+ {
+  "sku": "DEC-002",
+  "seller": "S161",
+  "title": "Ceramic Flower Vase White Decorative",
+  "desc": "White ceramic vase for flowers.",
+  "expect_category": "home_decor",
+  "expect_attrs": {
+   "material": "ceramic",
+   "color": "white"
+  },
+  "expect_decision": "PUBLISH",
+  "dup_group": null,
+  "note": ""
+ },
+ {
+  "sku": "FOO-001",
+  "seller": "S170",
+  "title": "Women Black Sandals Size 7 Casual",
+  "desc": "Black casual sandals for women.",
+  "expect_category": "footwear",
+  "expect_attrs": {
+   "color": "black"
+  },
+  "expect_decision": "REVIEW",
+  "dup_group": null,
+  "note": "numeric shoe size not in enum"
+ },
+ {
+  "sku": "FOO-002",
+  "seller": "S171",
+  "title": "Men Sports Shoes Grey L Lace Up",
+  "desc": "Grey lace-up sports shoes for men, size L.",
+  "expect_category": "footwear",
+  "expect_attrs": {
+   "color": "grey",
+   "size": "L"
+  },
+  "expect_decision": "PUBLISH",
+  "dup_group": null,
+  "note": ""
+ },
+ {
+  "sku": "JEW-001",
+  "seller": "S180",
+  "title": "Gold Plated Jhumka Earrings Traditional Brass",
+  "desc": "Brass jhumka earrings with gold plating.",
+  "expect_category": "jewellery",
+  "expect_attrs": {
+   "material": "brass",
+   "plating": "gold"
+  },
+  "expect_decision": "REVIEW",
+  "dup_group": null,
+  "note": "colour unstated"
+ },
+ {
+  "sku": "JEW-002",
+  "seller": "S181",
+  "title": "Silver Oxidised Necklace Set Party Wear Black Thread",
+  "desc": "Oxidised silver necklace with black thread.",
+  "expect_category": "jewellery",
+  "expect_attrs": {
+   "plating": "oxidised"
+  },
+  "expect_decision": "REVIEW",
+  "dup_group": null,
+  "note": "material ambiguous"
+ },
+ {
+  "sku": "MOB-001",
+  "seller": "S190",
+  "title": "Silicone Mobile Back Cover Transparent",
+  "desc": "Transparent silicone phone back cover.",
+  "expect_category": "mobile_accessories",
+  "expect_attrs": {
+   "material": "silicone"
+  },
+  "expect_decision": "REVIEW",
+  "dup_group": null,
+  "note": "colour ambiguous"
+ },
+ {
+  "sku": "MOB-002",
+  "seller": "S191",
+  "title": "Tempered Glass Screen Guard Pack of 2 Clear",
+  "desc": "Two clear tempered glass screen protectors.",
+  "expect_category": "mobile_accessories",
+  "expect_attrs": {
+   "material": "glass",
+   "pack_size": 2
+  },
+  "expect_decision": "REVIEW",
+  "dup_group": null,
+  "note": "colour ambiguous"
+ },
+ {
+  "sku": "BAD-001",
+  "seller": "S200",
+  "title": "Herbal oil cures diabetes miracle remedy 100% guaranteed",
+  "desc": "Ayurvedic oil that cures diabetes permanently.",
+  "expect_category": "unknown",
+  "expect_attrs": {},
+  "expect_decision": "REJECT",
+  "dup_group": null,
+  "note": "medical claim"
+ },
+ {
+  "sku": "BAD-002",
+  "seller": "S201",
+  "title": "Pepper spray for self defence women safety",
+  "desc": "Strong pepper spray, 50ml.",
+  "expect_category": "unknown",
+  "expect_attrs": {},
+  "expect_decision": "REJECT",
+  "dup_group": null,
+  "note": "prohibited item"
+ },
+ {
+  "sku": "BAD-003",
+  "seller": "S202",
+  "title": "Cotton Kurti Blue M - contact 9876543210 for bulk order",
+  "desc": "Call or whatsapp 9876543210 for wholesale rates.",
+  "expect_category": "kurtis",
+  "expect_attrs": {
+   "fabric": "cotton",
+   "color": "blue",
+   "size": "M"
+  },
+  "expect_decision": "REVIEW",
+  "dup_group": "kurti_blue_cotton_M",
+  "note": "contact details; same product as the other blue cotton M kurti (label corrected after threshold sweep)"
+ },
+ {
+  "sku": "BAD-004",
+  "seller": "S203",
+  "title": "Rolex replica watch first copy master quality",
+  "desc": "Looks identical to the original.",
+  "expect_category": "unknown",
+  "expect_attrs": {},
+  "expect_decision": "REJECT",
+  "dup_group": null,
+  "note": "counterfeit"
+ }
+]
