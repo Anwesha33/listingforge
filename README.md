@@ -80,6 +80,12 @@ Decision confusion (expected → actual):
 | **REVIEW** | 6 | 5 | 0 |
 | **REJECT** | 0 | 1 | 5 |
 
+These figures come from one run. The provider is not perfectly deterministic
+even at temperature 0, so a re-run moves attribute accuracy by roughly a point
+either way (0.919 and 0.935 on two runs of the same dataset); category accuracy,
+decision accuracy, the auto-publish rate and duplicate detection have been stable
+across runs.
+
 Most of the disagreement is `REVIEW → PUBLISH`: the labels predicted a human
 would be needed because an attribute looked unstated, and the model extracted it
 anyway. That is the pipeline outperforming its own label set, not failing — but
