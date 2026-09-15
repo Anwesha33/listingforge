@@ -1,0 +1,10 @@
+.env
+*.env
+bin/
+target/
+__pycache__/
+*.pyc
+.venv/
+.DS_Store
+node_modules/
+docs/INTERVIEW-GUIDE.md
