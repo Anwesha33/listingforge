@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Project-local Maven settings.
+
+  The machine's global ~/.m2/settings.xml points at an internal corporate
+  Artifactory that is not reachable from outside that network, and Maven caches
+  the resulting connection failures. This file routes every lookup through
+  Maven Central instead, so the build works anywhere.
+
+  Use it with:  mvn -s ../deploy/maven-settings.xml <goal>
+-->
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0">
+  <localRepository>${user.home}/.m2/repository</localRepository>
+
+  <mirrors>
+    <mirror>
+      <id>central-only</id>
+      <name>Maven Central, for everything</name>
+      <url>https://repo1.maven.org/maven2/</url>
+      <mirrorOf>*</mirrorOf>
+    </mirror>
+  </mirrors>
+
+  <profiles>
+    <profile>
+      <id>central-plugins</id>
+      <repositories>
+        <repository>
+          <id>central</id>
+          <url>https://repo1.maven.org/maven2/</url>
+          <releases><enabled>true</enabled></releases>
+          <snapshots><enabled>false</enabled></snapshots>
+        </repository>
+      </repositories>
+      <pluginRepositories>
+        <pluginRepository>
+          <id>central</id>
+          <url>https://repo1.maven.org/maven2/</url>
+          <releases><enabled>true</enabled></releases>
+          <snapshots><enabled>false</enabled></snapshots>
+        </pluginRepository>
+      </pluginRepositories>
+    </profile>
+  </profiles>
+
+  <activeProfiles>
+    <activeProfile>central-plugins</activeProfile>
+  </activeProfiles>
+</settings>
