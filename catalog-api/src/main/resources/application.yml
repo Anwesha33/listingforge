@@ -1,0 +1,67 @@
+spring:
+  application:
+    name: catalog-api
+
+  datasource:
+    url: ${DB_URL:jdbc:postgresql://localhost:5432/listingforge}
+    username: ${DB_USER:listingforge}
+    password: ${DB_PASSWORD:listingforge}
+
+  jpa:
+    hibernate:
+      # The schema is owned by deploy/init.sql, not by Hibernate. Letting JPA
+      # manage DDL would fight with the pgvector columns it cannot model.
+      ddl-auto: validate
+    properties:
+      hibernate:
+        jdbc:
+          time_zone: UTC
+    open-in-view: false
+
+  kafka:
+    bootstrap-servers: ${KAFKA_BROKERS:localhost:9092}
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+      # Wait for all in-sync replicas. A listing whose created-event is lost
+      # never gets enriched and sits in ENRICHING forever, so durability here
+      # is worth the latency.
+      acks: all
+      properties:
+        enable.idempotence: true
+    consumer:
+      group-id: catalog-api
+      auto-offset-reset: earliest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      # Values arrive as raw strings and are mapped to records inside the
+      # listener. The producers are a Python worker and a Go service, so there
+      # are no Java type headers to infer a target type from.
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+
+server:
+  port: ${PORT:8081}
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,prometheus
+  endpoint:
+    health:
+      show-details: always
+
+listingforge:
+  reconciliation:
+    # How long a listing may sit in ENRICHING before it is considered stalled.
+    #
+    # This has to exceed the worst-case time a listing can legitimately spend
+    # queued behind others at the worker's rate limit. Set below that, the sweep
+    # fails healthy listings that are simply waiting their turn -- which is what
+    # happened at a 5 minute timeout with a 12 rpm worker and a 30 listing
+    # batch.
+    stuck-after: PT15M
+    interval: PT60S
+
+logging:
+  level:
+    com.anwesha.listingforge: INFO
