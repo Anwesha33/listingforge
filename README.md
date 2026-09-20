@@ -128,13 +128,24 @@ duplicate.
 
 ```bash
 export GEMINI_API_KEY=...
-docker compose up -d                 # Redpanda + Postgres/pgvector
-make topics                          # create Kafka topics
+make up                              # Redpanda + Postgres/pgvector, and the topics
+make build                           # catalog-api (Java 17), moderation (Go), worker (Python)
 make run-catalog                     # terminal 1
 make run-enrichment                  # terminal 2
 make run-moderation                  # terminal 3
 make benchmark                       # submit the labelled dataset and score
 ```
+
+**`make up` creates the Kafka topics.** It did not always: they needed a separate
+`make topics`, and forgetting it produced the worst failure this project had —
+every service started cleanly, reported healthy, and nothing ever moved. Every
+`run-*` target now checks the topics exist first and refuses to start with a
+named error instead of stalling.
+
+**Java 17 is resolved, not hardcoded.** `make build` looks at `JAVA17_HOME`,
+then `/usr/libexec/java_home -v 17`, then `JAVA_HOME`, then `/usr/lib/jvm/*17*`,
+and fails with an explicit message if none of them is a JDK 17. Override with
+`make build JAVA17=/path/to/jdk-17`.
 
 ```bash
 curl -X POST localhost:8081/api/v1/listings -H 'Content-Type: application/json' -d '{
